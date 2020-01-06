@@ -2,27 +2,20 @@
 <html>
   <head>
     <title></title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <style type="text/css">
-    .img {
-      height: 10%;
-      width: 10%;
-    }
-    .mg {
-      margin: 4px;
-    }
-    .color-box {
-      width: 5%;
-      height: 100%;
-      margin: 20px;
-    }
-  </style>
+
   <body>
     <div id="app">
-      <product :premium="premium">
-      
+      <div class="cart">
+        <p><Cart>Cart({{cart.length}})</Cart></p>
+      </div>
+      <product
+        :premium="premium"
+        @add-to-cart="updateCart"
+        @remove-from-cart="remove"
+      >
       </product>
-    
     </div>
   </body>
   <script type="" src="https://unpkg.com/vue"></script>
